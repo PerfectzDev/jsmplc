@@ -12,13 +12,20 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 import {HomeComponent} from "./components/home/home.component";
 import {AppRoutingModule} from "./app-routing.module";
+import {HeaderComponent} from "./components/header/header.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {AboutUsComponent} from "./components/about-us/about-us.component";
+import {NzCardModule} from "ng-zorro-antd/card";
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,8 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzDropDownModule
+    NzDropDownModule,
+    NzCardModule
   ],
   providers: [
     {provide: NZ_I18N, useValue: en_US}
